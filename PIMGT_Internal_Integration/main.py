@@ -24,7 +24,7 @@ def get_args():
     parser.add_argument('model', type=str, help="traffic forecasting model")
     parser.add_argument('name', type=str, help="experiment name")
     parser.add_argument('gpu', type=str, help="CUDA device")
-    parser.add_argument('--batch_size', type=int, default=32, help="batch size")
+    parser.add_argument('--batch_size', type=int, default=8, help="batch size")
     parser.add_argument('--num_workers', type=int, default=8, help="number of workers")
     parser.add_argument('--lr', type=float, default=0.001, help="initial learning rate")
     parser.add_argument('--eps', type=float, default=1e-8, help="epsilon in optimizer")

@@ -1,0 +1,30 @@
+---
+
+dataset:
+  root: 'data/i-80'
+  eigenmaps_k: 8
+  similarity_delta: 0.1  # for building 'graph_sml'
+
+model:
+  d_model: 16
+  d_k: 4
+  d_hidden_mt: 16
+  d_hidden_ff: 16
+  eigenmaps_k: 8
+  num_embeddings: [600, 2]  # time of day (600 intervals), rest
+  num_features: 3
+  num_nodes: 70
+  num_encoder_layers: 6
+  num_decoder_layers: 6
+  num_heads: 4
+  which_transition_matrices: [True, True, True]
+  in_len: 30
+  out_len: 10
+  use_curriculum_learning: False
+  cl_decay_steps: 200
+  dropout: 0.3
+  noTSA: False
+  noSSA: False
+  noMeta: False
+  noTE: False
+  noSE: False

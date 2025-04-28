@@ -1,0 +1,599 @@
+Start time: 2025-04-27 22:21:59.855936
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "MGT",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 32,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 100,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/MGT/E01"
+}
+Start time: 2025-04-27 22:23:11.983096
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "MGT",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 32,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 100,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/MGT/E01"
+}
+Start time: 2025-04-27 22:29:56.219414
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "MGT",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 8,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 100,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_nodes": 70,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/MGT/E01"
+}
+--------- Model Info ---------
+Model size: 2.877196MB
+---------- Training ----------
+num_samples: 1767, num_batches: 220
+Start time: 2025-04-27 22:39:57.495105
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "MGT",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 8,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 100,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_nodes": 70,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/MGT/E01"
+}
+--------- Model Info ---------
+Model size: 2.877196MB
+---------- Training ----------
+num_samples: 1767, num_batches: 220
+Start time: 2025-04-27 22:43:04.651888
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "MGT",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 8,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 100,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_nodes": 70,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/MGT/E01"
+}
+--------- Model Info ---------
+Model size: 2.877196MB
+---------- Training ----------
+num_samples: 1767, num_batches: 220
+Start time: 2025-04-27 22:46:31.220364
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "MGT",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 8,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 100,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_nodes": 70,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/MGT/E01"
+}
+--------- Model Info ---------
+Model size: 2.877196MB
+---------- Training ----------
+num_samples: 1767, num_batches: 220
+Start time: 2025-04-27 22:49:12.914761
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "MGT",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 8,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 100,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_nodes": 70,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/MGT/E01"
+}
+--------- Model Info ---------
+Model size: 2.877196MB
+---------- Training ----------
+num_samples: 1767, num_batches: 220
+Start time: 2025-04-27 22:51:01.229105
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "MGT",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 8,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 100,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_nodes": 70,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/MGT/E01"
+}
+--------- Model Info ---------
+Model size: 2.877196MB
+---------- Training ----------
+num_samples: 1767, num_batches: 220
+Start time: 2025-04-27 22:55:29.587268
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "MGT",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 8,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 100,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_nodes": 70,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/MGT/E01"
+}
+--------- Model Info ---------
+Model size: 2.877196MB
+---------- Training ----------
+num_samples: 1767, num_batches: 220
+[epoch 0/99] ave_loss: 0.640685, time_elapsed: 166.608389(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.593144(sec)
+The best model 'best.pth' has been updated
+mae: 0.258897, best_mae: 0.258897
