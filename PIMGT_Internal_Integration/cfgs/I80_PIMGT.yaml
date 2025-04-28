@@ -1,0 +1,4 @@
+dataset:
+  root: 'data/I80'
+  eigenmaps_k: 8
+  similarity_delta: 0.1
