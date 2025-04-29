@@ -1,0 +1,162 @@
+Start time: 2025-04-28 23:20:08.123099
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "PIMGT_External",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 8,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 2,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_nodes": 70,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/PIMGT_External/E01"
+}
+--------- Model Info ---------
+Model size: 2.877196MB
+---------- Training ----------
+num_samples: 1767, num_batches: 220
+[epoch 0/1] ave_loss: 0.524787, time_elapsed: 170.201940(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.275222(sec)
+The best model 'best.pth' has been updated
+mae: 0.230381, best_mae: 0.230381
+[epoch 1/1] ave_loss: 0.319299, time_elapsed: 167.901241(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.514006(sec)
+The best model 'best.pth' has been updated
+mae: 0.201132, best_mae: 0.201132
+---------- Testing ----------
+num_samples: 589, num_batches: 74
+time_elapsed: 14.618676(sec)
+       rmse       mae       mape
+0  0.328838  0.113814  71.795563
+1  0.430793  0.129804  58.101768
+2  0.526751  0.154772  63.521809
+3  0.591272  0.172164  63.624374
+4  0.636316  0.186851  64.470970
+5  0.672639  0.199586  63.086033
+6  0.706617  0.211453  61.947792
+7  0.738259  0.222360  63.040565
+8  0.758736  0.230377  64.038040
+9  0.783544  0.237716  63.655628
+--------------------------
+End time: 2025-04-28 23:26:31.502275
+Start time: 2025-04-28 23:58:30.044243
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "PIMGT_External",
+  "name": "E01",
+  "gpu": "0",
+  "batch_size": 8,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 2,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_nodes": 70,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/PIMGT_External/E01"
+}
+--------- Model Info ---------
+Model size: 2.877196MB
+---------- Training ----------
+num_samples: 1767, num_batches: 220

@@ -18,6 +18,19 @@ import torch.optim as optim
 from utils.utils import *
 from utils.Metrics import *
 
+import random
+
+def set_seed(seed=42):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+    # For reproducibility
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+
 def get_args():
     parser = argparse.ArgumentParser(description="Train and test a deep model for traffic forecasting.")
     parser.add_argument('dataset', type=str, help="traffic dataset")
@@ -93,16 +106,20 @@ def train_epoch(train_loader, mean, std, normtype, device, model, statics, crite
         # print(f"inputs_extras[0] min/max: {extras[0].min()} / {extras[0].max()}")
         # print(f"inputs_extras[1] min/max: {extras[1].min()} / {extras[1].max()}")
 
-        outputs = model(inputs, targets, *extras, **statics)
-        outputs, targets = denormalize([outputs, targets], mean.to(device), std.to(device), normtype)
-        loss = criterion(outputs, targets)
+        mgt_outputs, kalman_outputs = model(inputs, targets, *extras, **statics)
+        mgt_outputs, kalman_outputs, targets = denormalize([mgt_outputs, kalman_outputs, targets], mean.to(device), std.to(device), normtype)
+
+        loss_mgt = criterion(mgt_outputs, targets)
+        loss_kalman = criterion(kalman_outputs, targets)
+
+        loss = model.alpha * loss_mgt + (1 - model.alpha) * loss_kalman
 
         ave.add(loss.item(), 1)
 
         optimizer.zero_grad()
         loss.backward()
         
-        del inputs, targets, extras, outputs, loss
+        del inputs, targets, extras, mgt_outputs, kalman_outputs, loss
         torch.cuda.empty_cache()
 
         if args.clip_grad_norm:
@@ -123,7 +140,13 @@ def val(val_loader, mean, std, normtype, device, model, statics, args, mode):
         inputs, *extras = move2device([inputs, ] + extras, device)
 
         with torch.no_grad():
-            outputs = model(inputs, None, *extras, **statics).cpu()
+            outputs = model(inputs, None, *extras, **statics)
+
+            # If model returns a tuple (PIMGT_External), select the MGT branch
+            if isinstance(outputs, tuple):
+                outputs = outputs[0]  # keep only mgt_outputs for val/test
+
+            outputs = outputs.cpu()
 
         outputs, = denormalize([outputs, ], mean, std, normtype)
         
@@ -253,6 +276,7 @@ def test(args, logger):
 
 if __name__ == "__main__":
     args = get_args()
+    set_seed(42)
     args.dataset_model_args = get_dataset_model_args(args.dataset, args.model)
     args.exp_dir = create_exp_dir(args.dataset, args.model, args.name)
 
