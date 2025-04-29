@@ -18,6 +18,19 @@ import torch.optim as optim
 from utils.utils import *
 from utils.Metrics import *
 
+import random
+
+def set_seed(seed=42):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+    # For reproducibility
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+
 def get_args():
     parser = argparse.ArgumentParser(description="Train and test a deep model for traffic forecasting.")
     parser.add_argument('dataset', type=str, help="traffic dataset")
@@ -253,6 +266,7 @@ def test(args, logger):
 
 if __name__ == "__main__":
     args = get_args()
+    set_seed(42)
     args.dataset_model_args = get_dataset_model_args(args.dataset, args.model)
     args.exp_dir = create_exp_dir(args.dataset, args.model, args.name)
 
