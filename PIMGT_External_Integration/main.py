@@ -44,7 +44,7 @@ def get_args():
     parser.add_argument('--weight_decay', type=float, default=0.0002, help="weight decay")
     parser.add_argument('--milestones', type=int, nargs='*', default=[50, 80], help="milestones for scheduler")
     parser.add_argument('--gamma', type=float, default=0.1, help="gamma for scheduler")
-    parser.add_argument('--epochs', type=int, default=2, help="number of epochs")
+    parser.add_argument('--epochs', type=int, default=100, help="number of epochs")
     parser.add_argument('--val_freq', type=int, default=1, help="validation frequency")
     parser.add_argument('--clip_grad_norm', type=bool, default=False, help="whether to clip gradient norm")
     parser.add_argument('--max_grad_norm', type=int, default=5, help="max gradient norm")
@@ -276,7 +276,7 @@ def test(args, logger):
 
 if __name__ == "__main__":
     args = get_args()
-    set_seed(42)
+    set_seed(79)
     args.dataset_model_args = get_dataset_model_args(args.dataset, args.model)
     args.exp_dir = create_exp_dir(args.dataset, args.model, args.name)
 

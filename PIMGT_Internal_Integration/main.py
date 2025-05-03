@@ -261,7 +261,7 @@ def test(args, logger):
 
 if __name__ == "__main__":
     args = get_args()
-    set_seed(42)
+    set_seed(79)
     args.dataset_model_args = get_dataset_model_args(args.dataset, args.model)
     args.exp_dir = create_exp_dir(args.dataset, args.model, args.name)
 
