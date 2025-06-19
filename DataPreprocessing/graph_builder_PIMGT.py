@@ -163,7 +163,7 @@ def split_and_save_dataset(data, base_path):
         with open(os.path.join(base_path, f"{name}.pkl"), "wb") as f:
             pickle.dump(split_data, f)
 
-    print(f"\n✅ Saved dataset splits to: {base_path}")
+    print(f"\nSaved dataset splits to: {base_path}")
     return {k: len(data['x'][s]) for k, s in splits.items()}
 
 
@@ -175,7 +175,7 @@ def build_graph_conn(df, node_index, segment_size=50.0):
     - Adjacent bins → adjacent lanes
     """
 
-    print("🔗 Building updated graph_conn adjacency matrix with lane neighbor support...")
+    print("Building updated graph_conn adjacency matrix with lane neighbor support...")
 
     # Convert to pandas for easier processing
     df_pd = df[["segment_id", "Lane_ID", "x_bin", "y_bin"]].drop_duplicates().to_pandas()
@@ -232,7 +232,7 @@ def build_graph_sml(complete_time_series, similarity_delta=0.1):
         np.ndarray: Symmetric graph (num_nodes, num_nodes), with self-loops.
     """
 
-    print("🔗 Building graph_sml with custom similarity measure...")
+    print("Building graph_sml with custom similarity measure...")
 
     # (time_steps, num_nodes, num_features) -> (num_nodes, flattened)
     time_steps, num_nodes, num_features = complete_time_series.shape
@@ -273,7 +273,7 @@ def build_eigenmaps(graph_conn, k=8):
         np.ndarray: Eigenmaps (num_nodes, k)
     """
 
-    print("🧠 Computing eigenmaps from graph_conn...")
+    print("Computing eigenmaps from graph_conn...")
 
     A = graph_conn.copy()
 
@@ -299,7 +299,7 @@ def build_eigenmaps(graph_conn, k=8):
     # 5. Keep first k non-trivial eigenvectors (skip trivial constant eigenvector)
     eigenmaps = eigenvectors[:, 1:k+1]
 
-    print(f"✅ Eigenmaps computed: {eigenmaps.shape} (num_nodes x {k})")
+    print(f"Eigenmaps computed: {eigenmaps.shape} (num_nodes x {k})")
     return eigenmaps
 
 
@@ -315,7 +315,7 @@ def build_graph_cor(complete_time_series, similarity_delta=0.1):
         np.ndarray: Asymmetric correlation graph (num_nodes, num_nodes)
     """
 
-    print("🔗 Building real graph_cor based on Pearson correlation...")
+    print("Building real graph_cor based on Pearson correlation...")
 
     time_steps, num_nodes, num_features = complete_time_series.shape
 
@@ -366,7 +366,7 @@ def build_transition_matrices(graph_conn, graph_sml, graph_cor=None):
         np.ndarray: Stacked transition matrices of shape (3, num_nodes, num_nodes)
     """
 
-    print("🔁 Building transition matrices...")
+    print("Building transition matrices...")
 
     # Add self-loops before normalizing
     S_conn = row_normalize(add_self_loop(graph_conn))
@@ -382,7 +382,7 @@ def build_transition_matrices(graph_conn, graph_sml, graph_cor=None):
     # Stack the three transition matrices
     transition_matrices = np.stack((S_conn, S_sml, S_cor), axis=0)
 
-    print(f"✅ transition_matrices built: {transition_matrices.shape} (3 x num_nodes x num_nodes)")
+    print(f"transition_matrices built: {transition_matrices.shape} (3 x num_nodes x num_nodes)")
     return transition_matrices
 
 
