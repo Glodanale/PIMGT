@@ -1,0 +1,613 @@
+Start time: 2025-07-11 18:13:48.789400
+---------- Args ----------
+{
+  "dataset": "I80",
+  "model": "PIMGT_External",
+  "name": "E42",
+  "gpu": "0",
+  "batch_size": 8,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 100,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data/i-80",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        600,
+        2
+      ],
+      "num_features": 3,
+      "num_nodes": 70,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true,
+        true
+      ],
+      "in_len": 30,
+      "out_len": 10,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": false,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/I80/PIMGT_External/E42"
+}
+--------- Model Info ---------
+Model size: 2.877196MB
+---------- Training ----------
+num_samples: 1767, num_batches: 220
+[epoch 0/99] ave_loss: 0.607629, time_elapsed: 171.108357(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.406304(sec)
+The best model 'best.pth' has been updated
+mae: 0.219639, best_mae: 0.219639
+[epoch 1/99] ave_loss: 0.460370, time_elapsed: 171.085479(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.099050(sec)
+The best model 'best.pth' has been updated
+mae: 0.205030, best_mae: 0.205030
+[epoch 2/99] ave_loss: 0.412092, time_elapsed: 169.877691(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.721138(sec)
+The best model 'best.pth' has been updated
+mae: 0.204775, best_mae: 0.204775
+[epoch 3/99] ave_loss: 0.350649, time_elapsed: 170.463924(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.319395(sec)
+The best model 'best.pth' has been updated
+mae: 0.204231, best_mae: 0.204231
+[epoch 4/99] ave_loss: 0.317075, time_elapsed: 169.763672(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.784167(sec)
+The best model 'best.pth' has been updated
+mae: 0.199550, best_mae: 0.199550
+[epoch 5/99] ave_loss: 0.300642, time_elapsed: 171.431294(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.084980(sec)
+The best model 'best.pth' has been updated
+mae: 0.187317, best_mae: 0.187317
+[epoch 6/99] ave_loss: 0.284936, time_elapsed: 170.463420(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.770048(sec)
+mae: 0.189871, best_mae: 0.187317
+[epoch 7/99] ave_loss: 0.281265, time_elapsed: 171.575106(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.938190(sec)
+The best model 'best.pth' has been updated
+mae: 0.176730, best_mae: 0.176730
+[epoch 8/99] ave_loss: 0.274898, time_elapsed: 169.534029(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.031348(sec)
+mae: 0.178157, best_mae: 0.176730
+[epoch 9/99] ave_loss: 0.274003, time_elapsed: 170.536391(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.824530(sec)
+mae: 0.181614, best_mae: 0.176730
+[epoch 10/99] ave_loss: 0.271287, time_elapsed: 169.098065(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.542009(sec)
+mae: 0.198284, best_mae: 0.176730
+[epoch 11/99] ave_loss: 0.269535, time_elapsed: 170.516709(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.853826(sec)
+mae: 0.180849, best_mae: 0.176730
+[epoch 12/99] ave_loss: 0.268815, time_elapsed: 169.213347(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.707692(sec)
+mae: 0.184458, best_mae: 0.176730
+[epoch 13/99] ave_loss: 0.267495, time_elapsed: 172.006761(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.420690(sec)
+mae: 0.183848, best_mae: 0.176730
+[epoch 14/99] ave_loss: 0.267252, time_elapsed: 169.897575(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.162430(sec)
+mae: 0.181720, best_mae: 0.176730
+[epoch 15/99] ave_loss: 0.267815, time_elapsed: 170.837390(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.706782(sec)
+mae: 0.187610, best_mae: 0.176730
+[epoch 16/99] ave_loss: 0.268134, time_elapsed: 169.046556(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.973536(sec)
+mae: 0.184784, best_mae: 0.176730
+[epoch 17/99] ave_loss: 0.266419, time_elapsed: 171.790879(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.708308(sec)
+The best model 'best.pth' has been updated
+mae: 0.175408, best_mae: 0.175408
+[epoch 18/99] ave_loss: 0.266160, time_elapsed: 169.711685(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.865058(sec)
+mae: 0.186959, best_mae: 0.175408
+[epoch 19/99] ave_loss: 0.265381, time_elapsed: 170.991783(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.692427(sec)
+mae: 0.188360, best_mae: 0.175408
+[epoch 20/99] ave_loss: 0.264883, time_elapsed: 169.387114(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.236086(sec)
+mae: 0.178974, best_mae: 0.175408
+[epoch 21/99] ave_loss: 0.263452, time_elapsed: 172.142436(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.770097(sec)
+mae: 0.181433, best_mae: 0.175408
+[epoch 22/99] ave_loss: 0.264092, time_elapsed: 170.480227(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.317480(sec)
+mae: 0.190907, best_mae: 0.175408
+[epoch 23/99] ave_loss: 0.264774, time_elapsed: 171.294785(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.853139(sec)
+mae: 0.176074, best_mae: 0.175408
+[epoch 24/99] ave_loss: 0.262734, time_elapsed: 170.236067(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.448397(sec)
+The best model 'best.pth' has been updated
+mae: 0.174546, best_mae: 0.174546
+[epoch 25/99] ave_loss: 0.263784, time_elapsed: 171.028508(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.767348(sec)
+mae: 0.180130, best_mae: 0.174546
+[epoch 26/99] ave_loss: 0.262951, time_elapsed: 170.581220(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.445965(sec)
+mae: 0.177618, best_mae: 0.174546
+[epoch 27/99] ave_loss: 0.262751, time_elapsed: 171.066171(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.124355(sec)
+mae: 0.182588, best_mae: 0.174546
+[epoch 28/99] ave_loss: 0.262630, time_elapsed: 169.300228(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.442727(sec)
+The best model 'best.pth' has been updated
+mae: 0.171730, best_mae: 0.171730
+[epoch 29/99] ave_loss: 0.261986, time_elapsed: 170.096521(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.015774(sec)
+mae: 0.184972, best_mae: 0.171730
+[epoch 30/99] ave_loss: 0.261913, time_elapsed: 169.770585(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.736405(sec)
+mae: 0.172829, best_mae: 0.171730
+[epoch 31/99] ave_loss: 0.261680, time_elapsed: 170.308751(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.608972(sec)
+mae: 0.173875, best_mae: 0.171730
+[epoch 32/99] ave_loss: 0.261365, time_elapsed: 169.346401(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.597723(sec)
+mae: 0.172493, best_mae: 0.171730
+[epoch 33/99] ave_loss: 0.261857, time_elapsed: 171.236633(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.955961(sec)
+mae: 0.177920, best_mae: 0.171730
+[epoch 34/99] ave_loss: 0.261248, time_elapsed: 169.702701(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.002191(sec)
+mae: 0.183994, best_mae: 0.171730
+[epoch 35/99] ave_loss: 0.261828, time_elapsed: 169.502782(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.065041(sec)
+mae: 0.186395, best_mae: 0.171730
+[epoch 36/99] ave_loss: 0.261349, time_elapsed: 171.311007(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.108327(sec)
+mae: 0.172298, best_mae: 0.171730
+[epoch 37/99] ave_loss: 0.261286, time_elapsed: 169.811736(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.350411(sec)
+The best model 'best.pth' has been updated
+mae: 0.170964, best_mae: 0.170964
+[epoch 38/99] ave_loss: 0.260968, time_elapsed: 170.141264(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.759651(sec)
+mae: 0.177735, best_mae: 0.170964
+[epoch 39/99] ave_loss: 0.260249, time_elapsed: 169.175137(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.864916(sec)
+mae: 0.172458, best_mae: 0.170964
+[epoch 40/99] ave_loss: 0.262994, time_elapsed: 171.903196(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.194170(sec)
+mae: 0.173224, best_mae: 0.170964
+[epoch 41/99] ave_loss: 0.261497, time_elapsed: 169.179693(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.980969(sec)
+mae: 0.176590, best_mae: 0.170964
+[epoch 42/99] ave_loss: 0.260899, time_elapsed: 171.806561(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.495230(sec)
+mae: 0.171425, best_mae: 0.170964
+[epoch 43/99] ave_loss: 0.260003, time_elapsed: 168.978657(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.518863(sec)
+The best model 'best.pth' has been updated
+mae: 0.170689, best_mae: 0.170689
+[epoch 44/99] ave_loss: 0.260394, time_elapsed: 171.537649(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.485943(sec)
+mae: 0.180996, best_mae: 0.170689
+[epoch 45/99] ave_loss: 0.259906, time_elapsed: 169.738475(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.827554(sec)
+mae: 0.174372, best_mae: 0.170689
+[epoch 46/99] ave_loss: 0.260365, time_elapsed: 171.716029(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.014432(sec)
+mae: 0.173980, best_mae: 0.170689
+[epoch 47/99] ave_loss: 0.260697, time_elapsed: 171.797624(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.986409(sec)
+mae: 0.175877, best_mae: 0.170689
+[epoch 48/99] ave_loss: 0.260469, time_elapsed: 171.298546(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.944504(sec)
+mae: 0.175212, best_mae: 0.170689
+[epoch 49/99] ave_loss: 0.262295, time_elapsed: 170.320339(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.303636(sec)
+mae: 0.187240, best_mae: 0.170689
+[epoch 50/99] ave_loss: 0.254471, time_elapsed: 171.433304(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.263771(sec)
+The best model 'best.pth' has been updated
+mae: 0.168652, best_mae: 0.168652
+[epoch 51/99] ave_loss: 0.253448, time_elapsed: 168.573145(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.666798(sec)
+The best model 'best.pth' has been updated
+mae: 0.168005, best_mae: 0.168005
+[epoch 52/99] ave_loss: 0.253987, time_elapsed: 170.222716(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.246971(sec)
+The best model 'best.pth' has been updated
+mae: 0.167755, best_mae: 0.167755
+[epoch 53/99] ave_loss: 0.253906, time_elapsed: 169.642654(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.828691(sec)
+The best model 'best.pth' has been updated
+mae: 0.167729, best_mae: 0.167729
+[epoch 54/99] ave_loss: 0.253817, time_elapsed: 171.755373(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.056230(sec)
+The best model 'best.pth' has been updated
+mae: 0.167613, best_mae: 0.167613
+[epoch 55/99] ave_loss: 0.253631, time_elapsed: 168.848303(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.914155(sec)
+The best model 'best.pth' has been updated
+mae: 0.167563, best_mae: 0.167563
+[epoch 56/99] ave_loss: 0.253688, time_elapsed: 169.618695(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.780128(sec)
+mae: 0.167574, best_mae: 0.167563
+[epoch 57/99] ave_loss: 0.253922, time_elapsed: 170.089966(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.079666(sec)
+mae: 0.167960, best_mae: 0.167563
+[epoch 58/99] ave_loss: 0.253691, time_elapsed: 171.947015(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.648087(sec)
+mae: 0.167974, best_mae: 0.167563
+[epoch 59/99] ave_loss: 0.253322, time_elapsed: 169.189407(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.214867(sec)
+mae: 0.167988, best_mae: 0.167563
+[epoch 60/99] ave_loss: 0.253672, time_elapsed: 170.853303(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.907041(sec)
+mae: 0.167651, best_mae: 0.167563
+[epoch 61/99] ave_loss: 0.253635, time_elapsed: 169.051695(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.053438(sec)
+The best model 'best.pth' has been updated
+mae: 0.167441, best_mae: 0.167441
+[epoch 62/99] ave_loss: 0.253840, time_elapsed: 172.062771(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.311901(sec)
+mae: 0.167861, best_mae: 0.167441
+[epoch 63/99] ave_loss: 0.253810, time_elapsed: 171.028337(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.401209(sec)
+mae: 0.167542, best_mae: 0.167441
+[epoch 64/99] ave_loss: 0.253387, time_elapsed: 169.351649(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.167159(sec)
+mae: 0.168006, best_mae: 0.167441
+[epoch 65/99] ave_loss: 0.253978, time_elapsed: 172.023122(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.856995(sec)
+mae: 0.168036, best_mae: 0.167441
+[epoch 66/99] ave_loss: 0.253688, time_elapsed: 170.308567(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.768508(sec)
+The best model 'best.pth' has been updated
+mae: 0.167300, best_mae: 0.167300
+[epoch 67/99] ave_loss: 0.253576, time_elapsed: 171.130913(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.652347(sec)
+mae: 0.168047, best_mae: 0.167300
+[epoch 68/99] ave_loss: 0.253284, time_elapsed: 170.407739(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.637201(sec)
+mae: 0.167640, best_mae: 0.167300
+[epoch 69/99] ave_loss: 0.253872, time_elapsed: 171.166299(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.858211(sec)
+mae: 0.168124, best_mae: 0.167300
+[epoch 70/99] ave_loss: 0.253769, time_elapsed: 169.495851(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.172825(sec)
+The best model 'best.pth' has been updated
+mae: 0.167229, best_mae: 0.167229
+[epoch 71/99] ave_loss: 0.253358, time_elapsed: 171.455500(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.326672(sec)
+mae: 0.167427, best_mae: 0.167229
+[epoch 72/99] ave_loss: 0.253487, time_elapsed: 172.428360(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.415165(sec)
+mae: 0.167675, best_mae: 0.167229
+[epoch 73/99] ave_loss: 0.253835, time_elapsed: 171.421136(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.231992(sec)
+The best model 'best.pth' has been updated
+mae: 0.167013, best_mae: 0.167013
+[epoch 74/99] ave_loss: 0.253725, time_elapsed: 168.587404(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.064303(sec)
+mae: 0.167937, best_mae: 0.167013
+[epoch 75/99] ave_loss: 0.253800, time_elapsed: 171.920449(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.561687(sec)
+mae: 0.167421, best_mae: 0.167013
+[epoch 76/99] ave_loss: 0.253479, time_elapsed: 168.451229(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.721014(sec)
+mae: 0.167427, best_mae: 0.167013
+[epoch 77/99] ave_loss: 0.253378, time_elapsed: 171.781420(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.387328(sec)
+mae: 0.167095, best_mae: 0.167013
+[epoch 78/99] ave_loss: 0.253650, time_elapsed: 169.980137(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.552649(sec)
+mae: 0.167812, best_mae: 0.167013
+[epoch 79/99] ave_loss: 0.253518, time_elapsed: 171.975572(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.195305(sec)
+mae: 0.167328, best_mae: 0.167013
+[epoch 80/99] ave_loss: 0.252979, time_elapsed: 168.830749(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.107176(sec)
+The best model 'best.pth' has been updated
+mae: 0.166915, best_mae: 0.166915
+[epoch 81/99] ave_loss: 0.253030, time_elapsed: 170.987131(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.930834(sec)
+The best model 'best.pth' has been updated
+mae: 0.166896, best_mae: 0.166896
+[epoch 82/99] ave_loss: 0.252712, time_elapsed: 169.052833(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.906051(sec)
+mae: 0.166956, best_mae: 0.166896
+[epoch 83/99] ave_loss: 0.252653, time_elapsed: 171.085160(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.403067(sec)
+mae: 0.166899, best_mae: 0.166896
+[epoch 84/99] ave_loss: 0.252779, time_elapsed: 171.885732(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.343092(sec)
+The best model 'best.pth' has been updated
+mae: 0.166863, best_mae: 0.166863
+[epoch 85/99] ave_loss: 0.252897, time_elapsed: 171.879183(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.977257(sec)
+mae: 0.166891, best_mae: 0.166863
+[epoch 86/99] ave_loss: 0.252759, time_elapsed: 171.107369(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.592699(sec)
+mae: 0.166881, best_mae: 0.166863
+[epoch 87/99] ave_loss: 0.252681, time_elapsed: 171.918736(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.908509(sec)
+The best model 'best.pth' has been updated
+mae: 0.166776, best_mae: 0.166776
+[epoch 88/99] ave_loss: 0.252582, time_elapsed: 169.872328(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.796132(sec)
+mae: 0.166845, best_mae: 0.166776
+[epoch 89/99] ave_loss: 0.252734, time_elapsed: 169.996172(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.905330(sec)
+mae: 0.166787, best_mae: 0.166776
+[epoch 90/99] ave_loss: 0.252598, time_elapsed: 169.857857(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.490690(sec)
+mae: 0.166819, best_mae: 0.166776
+[epoch 91/99] ave_loss: 0.252846, time_elapsed: 171.016667(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.835294(sec)
+mae: 0.166998, best_mae: 0.166776
+[epoch 92/99] ave_loss: 0.252866, time_elapsed: 171.027834(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 14.925121(sec)
+mae: 0.166810, best_mae: 0.166776
+[epoch 93/99] ave_loss: 0.252950, time_elapsed: 169.277076(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 16.173147(sec)
+The best model 'best.pth' has been updated
+mae: 0.166753, best_mae: 0.166753
+[epoch 94/99] ave_loss: 0.252832, time_elapsed: 170.162070(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.077367(sec)
+The best model 'best.pth' has been updated
+mae: 0.166713, best_mae: 0.166713
+[epoch 95/99] ave_loss: 0.252616, time_elapsed: 170.379765(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.165612(sec)
+The best model 'best.pth' has been updated
+mae: 0.166665, best_mae: 0.166665
+[epoch 96/99] ave_loss: 0.252934, time_elapsed: 171.390513(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.871970(sec)
+mae: 0.166813, best_mae: 0.166665
+[epoch 97/99] ave_loss: 0.252926, time_elapsed: 170.064090(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.441596(sec)
+The best model 'best.pth' has been updated
+mae: 0.166424, best_mae: 0.166424
+[epoch 98/99] ave_loss: 0.252700, time_elapsed: 172.851238(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.266056(sec)
+mae: 0.166500, best_mae: 0.166424
+[epoch 99/99] ave_loss: 0.253241, time_elapsed: 170.585172(sec)
+Validating...
+num_samples: 589, num_batches: 74
+time_elapsed: 15.908720(sec)
+mae: 0.166615, best_mae: 0.166424
+---------- Testing ----------
+num_samples: 589, num_batches: 74
+time_elapsed: 15.465837(sec)
+       rmse       mae       mape
+0  0.305693  0.051847  17.160297
+1  0.426156  0.082095  14.722962
+2  0.533275  0.111375  16.240095
+3  0.604662  0.135211  18.868109
+4  0.652165  0.154147  21.669819
+5  0.689899  0.169751  22.250128
+6  0.724601  0.183345  23.518829
+7  0.755453  0.195110  24.994133
+8  0.768244  0.203609  26.344845
+9  0.782747  0.211410  27.151257
+--------------------------
+End time: 2025-07-11 23:24:05.596056
